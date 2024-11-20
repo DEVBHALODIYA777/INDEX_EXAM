@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Clone</title>
+    <link rel="stylesheet" href="INDEX.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Filters</h2>
+        <div>
+            <label for="category">Category:</label>
+            <select id="category" onchange="filterProducts()">
+                <option value="all">All</option>
+                <option value="electronics">Electronics</option>
+                <option value="jewelery">Jewelry</option>
+                <option value="men's clothing">Men's Clothing</option>
+                <option value="women's clothing">Women's Clothing</option>
+            </select>
+        </div>
+        <div>
+            <label for="sort">Sort By:</label>
+            <select id="sort" onchange="sortProducts()">
+                <option value="price_asc">Price: Low to High</option>
+                <option value="price_desc">Price: High to Low</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="product-list">
+        <h1>Products</h1>
+        <div id="product-container" class="product-container">
+        </div>
+    </div>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">×</span>
+            <h2 id="productTitle"></h2>
+            <img id="productImage" src="" alt="Product Image">
+            <p id="productDescription"></p>
+            <p id="productPrice"></p>
+        </div>
+    </div>
+
+    <script src="INDEX.js"></script>
+</body>
+</html>
